@@ -3481,8 +3481,19 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
 // 
  $(document).foundation();
+ 
  $(document).ready(function(){
+	$(".bit-image").velocity({ opacity: 0 }, { display: "block" });
+	$(".bit-text").velocity({ opacity: 0 }, { display: "block" });
 	
+	$(".homepage-image").velocity({ opacity: 0 }, { display: "block" });
+	$(".homepage-text").velocity({ opacity: 0 }, { display: "block" });
+	
+	$(".newsletter-image").velocity({ opacity: 0 }, { display: "block" });
+	$(".newsletter-text").velocity({ opacity: 0 }, { display: "block" });
+
+	$(".princess-image").velocity({ opacity: 0 }, { display: "block" });
+	$(".princess-text").velocity({ opacity: 0 }, { display: "block" });
 	 
 	 $('#nav-icon3').click(function(){
 		$(this).toggleClass('open');
@@ -3497,7 +3508,85 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 	  $(".logo").velocity("transition.slideUpIn", 1250);
   $(".welcome").velocity("transition.slideUpIn", { delay: 900 });     
 	 
+hasAnimated = false;
+hasAnimatedTwo = false;
+hasAnimatedThree = false;
+hasAnimatedFour = false;
+	 // Bits and bricks animation
+	 $(window).scroll(function(){
+  var windowWidth = $(this).width();
+  var windowHeight = $(this).height();
+  var windowScrollTop = $(this).scrollTop();
+  
+  // show bits and bricks
+   
+  if(windowScrollTop>200){
+	 
+    if(hasAnimated == false) {
+	    
+	    $(".bit-image").velocity("transition.slideUpIn", 1250);
+	    $(".bit-text").velocity("transition.slideDownIn", 1250);
+	      hasAnimated = true;
+	      
+           
+    } else {
+	    hasAnimated = true;
+	  
+    }
+           
+  }
+  
+  if(windowScrollTop>1400){
+	  
+	  if(hasAnimatedTwo == false) {
+	    
+	    $(".homepage-image").velocity("transition.slideUpIn", 1250);
+	    $(".homepage-text").velocity("transition.slideDownIn", 1250);
+	      hasAnimatedTwo = true;
+	      
+           
+    } else {
+	    hasAnimatedTwo = true;
+	  
+    }
+    }
+    
+    if(windowScrollTop>1800){
+	  
+	  if(hasAnimatedThree == false) {
+	    
+	    $(".newsletter-image").velocity("transition.slideUpIn", 1250);
+	    $(".newsletter-text").velocity("transition.slideDownIn", 1250);
+	      hasAnimatedThree = true;
+	      
+           
+    } else {
+	    hasAnimatedThree = true;
+	  
+    }
+    }
+   if(windowScrollTop>2200){
+	  
+	  if(hasAnimatedFour == false) {
+	    
+	    $(".princess-image").velocity("transition.slideUpIn", 1250);
+	    $(".princess-text").velocity("transition.slideDownIn", 1250);
+	      hasAnimatedFour = true;
+	      
+           
+    } else {
+	    hasAnimatedFour = true;
+	  
+    }
 
+	  }
+	  
+	  
+	 
+}); 
+	 
+
+	 
 	 //Navigation
 
 

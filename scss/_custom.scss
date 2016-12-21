@@ -1,7 +1,10 @@
 body {
+
 	background: url(../img/space.jpg) no-repeat #000000;
 	color: #7B7979;
 		overflow: hidden;
+
+		
 
 }
 
@@ -358,11 +361,28 @@ opacity: 1;
 @media #{$large-up} { 
 	padding: 100px 0 100px 0;
 
-
-
-
 }
 
+}
+.bits {
+	
+ 	background-image: url(../img/lego-tile.jpg);
+	background-color: #0cceeb;
+	background-attachment: fixed;
+	color: white;
+	
+}
+.white {
+	color: white;
+}
+.bit-image {
+
+}
+.bit-text{
+	padding-top: 80px;
+	@media #{$small-only} { 
+	padding-top: 0;
+		}
 }
 .bio-row {
 
